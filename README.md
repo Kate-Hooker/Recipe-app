@@ -1,2 +1,2 @@
 # Recipe-app
-Practise react, useState, Hookes and APIs
+Practise react, useState, Hooks and APIs
