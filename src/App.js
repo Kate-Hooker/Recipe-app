@@ -12,7 +12,9 @@ const App = () => {
 
   useEffect(() => {
     console.log('effect has been run')
-  })
+  }, [])
+
+  const getRecipes 
 
   return (
     <div className="App">
@@ -22,7 +24,7 @@ const App = () => {
           Search
         </button>
       </form>
-      <h1 onClick={() => setCounter(counter + 1)}>Counter: {counter} </h1>
+
     </div>
   )
 }
