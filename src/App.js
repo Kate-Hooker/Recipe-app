@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 
 const App = () => {
@@ -7,6 +7,12 @@ const App = () => {
   const APP_KEY = '0ae5ba87c9bd4635c091a3a7963f6541'
 
   const exampleReq = `https://api.edamam.com/api/recipes/v2/0123456789abcdef0123456789abcdef?app_id=${APP_ID}&app_key=${APP_KEY}`
+
+  const [counter, setCounter] = useState(0)
+
+  useEffect(() => {
+    console.log('effect has been run')
+  })
 
   return (
     <div className="App">
@@ -16,7 +22,7 @@ const App = () => {
           Search
         </button>
       </form>
-      <h1>Hello react</h1>
+      <h1 onClick={() => setCounter(counter + 1)}>Counter: {counter} </h1>
     </div>
   )
 }
