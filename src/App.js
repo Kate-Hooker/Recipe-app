@@ -38,6 +38,7 @@ const App = () => {
   const getSearch = (e) => {
     e.preventDefault() // stops page refresh for everyletter in search bar
     setQuery(search)
+    setSearch('')
   }
 
   return (
