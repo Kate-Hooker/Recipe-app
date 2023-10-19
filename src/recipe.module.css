@@ -1,4 +1,4 @@
-.recipe{
+.recipe {
   border-radius: 10px;
   box-shadow: 0px 5px 20px rgb(24, 24, 24);
   margin: 20px;
@@ -8,11 +8,10 @@
   background: white;
   align-items: center;
   min-width: 40%;
-
 }
 
-.image{
+.image {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
 }
