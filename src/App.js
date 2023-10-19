@@ -38,6 +38,7 @@ const App = () => {
   const getSearch = (e) => {
     e.preventDefault() // stops page refresh for everyletter in search bar
     setQuery(search)
+    setSearch('')
   }
 
   return (
@@ -53,14 +54,17 @@ const App = () => {
           Search
         </button>
       </form>
+      <div className='recipes'>
       {recipes.map((recipe) => (
         <Recipe
           key={recipe.recipe.label}
           title={recipe.recipe.label}
           calories={recipe.recipe.calories}
           image={recipe.recipe.image}
+          ingredients={recipe.recipe.ingredients}
         />
       ))}
+      </div>
     </div>
   )
 }
