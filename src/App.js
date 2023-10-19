@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import React, { useEffect, useState } from 'react'
 import './App.css'
+import Recipe from './Recipe'
 
 const App = () => {
   const APP_ID = process.env.APP_ID //
@@ -35,6 +36,14 @@ const App = () => {
           Search
         </button>
       </form>
+      {recipes.map((recipe) => (
+        <Recipe
+          key={recipe.recipe.label}
+          title={recipe.recipe.label}
+          calories={recipe.recipe.calories}
+          image={recipe.recipe.image}
+        />
+      ))}
     </div>
   )
 }
