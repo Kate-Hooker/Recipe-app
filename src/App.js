@@ -10,6 +10,8 @@ const App = () => {
 
   //const [counter, setCounter] = useState(0)
 
+  const [recipes, setRecipes] = useState([])
+
   useEffect(() => {
     //console.log('effect has been run')
     getRecipes()
@@ -21,7 +23,8 @@ const App = () => {
       `https://api.edamam.com/search?q=tuna&_app_id=${APP_ID}&app_key=${APP_KEY}`
     )
     const data = await response.json()
-    console.log(data)
+    setRecipes(data.hits)
+    console.log(data.hits)
   }
 
   return (
